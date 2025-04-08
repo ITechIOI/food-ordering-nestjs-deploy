@@ -18,6 +18,9 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
 
+  console.log('FASTAPI_URL:', configService.get<string>('FASTAPI_URL'));
+  console.log('JWT_SECRET:', configService.get<string>('JWT_SECRET'));
+
   // Use Express to serve static files
   app.useStaticAssets(join(__dirname, '..', 'modules/payment/templates'));
   // Middleware cho GraphQL Exception
