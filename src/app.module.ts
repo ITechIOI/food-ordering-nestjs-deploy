@@ -47,6 +47,7 @@ import { ComplaintModule } from './modules/complaint/complaint.module';
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schemas/schema.gql'),
       csrfPrevention: false,
+      path: '/graphql',
       buildSchemaOptions: {
         numberScalarMode: 'integer',
       },
